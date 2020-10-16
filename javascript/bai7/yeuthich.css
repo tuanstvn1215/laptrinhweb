@@ -7,20 +7,37 @@ body{
     display: flex;
     justify-content: center;
 }
-.header{
+.wrapbinhchon .header{
     text-align: center;
     font-size: x-large;
     font-weight: bold;
 }
-#formbinhchon{padding: 50px;
+#formbinhchon{
+    padding: 50px;
     background-color: white;
     border: 1px solid gainsboro;
     display: flex;
     justify-content: space-evenly;
     flex-direction: column;
     align-content: center;
-    width: 300px;
+}
+#formbinhchon *{
+    margin: 3px;
 }
 #formbinhchon .buttons{
+    
     margin-top: 10px;
+}
+#formbinhchon .buttons .button {
+    width: 150px;
+    font-size: medium;
+    border: 1px solid gainsboro;
+    outline: none;
+    background-color: rgb(0, 119, 0);
+    color: white;
+    height: 50px;
+}
+#formbinhchon .buttons .button:hover{
+    background-color: rgb(0, 177, 0);
+
 }

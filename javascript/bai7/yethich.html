@@ -9,10 +9,14 @@
 </head>
 
 <body>
-    <div class="header">BÌNH CHỌN THÀNH PHỐ YÊU THÍCH</div>
+
     <div class="wrapbinhchon">
+
         <form id="formbinhchon" action="">
-            <div><label for="">Họ và tên:</label><input type="text" id="ten"></div>
+            <div class="header">BÌNH CHỌN THÀNH PHỐ YÊU THÍCH</div>
+            <div>
+                <label for="">Họ và tên:</label><input type="text" id="ten">
+            </div>
             <div>
                 <label for="">Phái</label>
                 <input type="radio" name="phai" value="nam"><label for="">Nam</label>
@@ -20,17 +24,15 @@
             </div>
             <div>
                 <div>Chọn địa điểm</div>
-                <div id="dsthanhpho">
-                </div>
-
+                <div id="dsthanhpho"></div>
             </div>
             <div><label>Thành phố yêu thích nhất</label>
                 <select id="yeuthichnhat"></div>
             </select>
             <div class="buttons">
-                <input type="button" onclick="binhchon()" value="Bình chọn">
-                <input type="button" onclick="themthanhpho()" value="Thêm thành phố">
-                <input type="button" onclick="xoathanhpho()" value="Xoá thành phố">
+                <input class='button' type="button" onclick="binhchon()" value="Bình chọn">
+                <input class='button' type="button" onclick="themthanhpho()" value="Thêm thành phố">
+                <input class='button' type="button" onclick="xoathanhpho()" value="Xoá thành phố">
             </div>
             <div>
                 <p>Kết quả:</p>
