@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="yeuthich.css">
+    <title>Document</title>
+
+</head>
+
+<body>
+    <div class="header">BÌNH CHỌN THÀNH PHỐ YÊU THÍCH</div>
+    <div class="wrapbinhchon">
+        <form id="formbinhchon" action="">
+            <div><label for="">Họ và tên:</label><input type="text" id="ten"></div>
+            <div>
+                <label for="">Phái</label>
+                <input type="radio" name="phai" value="nam"><label for="">Nam</label>
+                <input type="radio" name="phai" value="nữ"><label for="">Nữ</label>
+            </div>
+            <div>
+                <div>Chọn địa điểm</div>
+                <div id="dsthanhpho">
+                </div>
+
+            </div>
+            <div><label>Thành phố yêu thích nhất</label>
+                <select id="yeuthichnhat"></div>
+            </select>
+            <div class="buttons">
+                <input type="button" onclick="binhchon()" value="Bình chọn">
+                <input type="button" onclick="themthanhpho()" value="Thêm thành phố">
+                <input type="button" onclick="xoathanhpho()" value="Xoá thành phố">
+            </div>
+            <div>
+                <p>Kết quả:</p>
+                <p id='ketqua'></p>
+
+            </div>
+        </form>
+    </div>
+
+    <script>
+        var dsThanhpho = ["Hà Nội", "Nha Trang", "TP HCM", "Cần Thơ"]
+        var htmldsthanhpho = document.getElementById('dsthanhpho')
+        var htmlyeuthichnhat = document.getElementById('yeuthichnhat')
+
+        khoitao();
+        function khoitao() {
+            while (htmldsthanhpho.firstChild)
+                htmldsthanhpho.removeChild(htmldsthanhpho.firstChild)
+
+            while (htmlyeuthichnhat.firstChild) {
+                htmlyeuthichnhat.removeChild(htmlyeuthichnhat.firstChild)
+            }
+            for (var i = 0; i < dsThanhpho.length; i++) {
+                var checkboxThanhpho = document.createElement('input')
+                checkboxThanhpho.type = 'checkbox'
+                checkboxThanhpho.name = 'thanhpho'
+                checkboxThanhpho.value = dsThanhpho[i]
+                var labelThanhpho = document.createElement('label')
+                labelThanhpho.innerText = dsThanhpho[i]
+                htmldsthanhpho.appendChild(checkboxThanhpho)
+                htmldsthanhpho.appendChild(labelThanhpho)
+                htmldsthanhpho.appendChild(document.createElement('br'))
+                var optionThanhpho = document.createElement('option')
+                optionThanhpho.value = dsThanhpho[i]
+                optionThanhpho.innerText = dsThanhpho[i]
+                htmlyeuthichnhat.appendChild(optionThanhpho)
+            }
+
+        }
+
+        function themthanhpho() {
+            var flag = false
+            var str = prompt('Nhập vào thành phố cần thêm: ', 'Sóc Trăng')
+            for (var i = 0; i < dsThanhpho.length; i++)
+                if (str.toUpperCase().indexOf(dsThanhpho[i].toUpperCase()) != -1)
+                    flag = true
+            if (flag == false)
+                dsThanhpho.push(str)
+            else
+                alert("Thành phố đã tồn tại")
+            khoitao()
+        }
+        function xoathanhpho() {
+            var str = prompt('Nhập vào thành phố cần xoá: ', 'Sóc Trăng')
+            var flag = -1
+            for (var i = 0; i < dsThanhpho.length; i++)
+                if (str.toUpperCase().indexOf(dsThanhpho[i].toUpperCase()) != -1)
+                    flag = i
+            if (flag != -1)
+                dsThanhpho.splice(flag, 1)
+            else
+                alert("Thành phố không tồn tại")
+            khoitao()
+        } function binhchon() {
+            var ketqua = document.getElementById('ketqua')
+            var dsbinhchon = new Array()
+            var htmldsbinhchon = document.getElementsByName('thanhpho')
+            var phai
+            var ten = document.getElementById('ten').value
+            var yeuthichnhat = document.getElementById('yeuthichnhat').value
+            htmldsbinhchon.forEach((value) => {
+                if (value.checked == true)
+                    dsbinhchon.push(value.value)
+            })
+            document.getElementsByName('phai').forEach((value) => {
+                if (value.checked)
+                    phai = value.value
+            })
+            ketqua.innerText = `${ten} (${phai})\n -Tp yêu thích ${dsbinhchon.join(' | ')}\n -Tp thích nhất: ${yeuthichnhat}`
+        }
+    </script>
+</body>
+
+
+</html>

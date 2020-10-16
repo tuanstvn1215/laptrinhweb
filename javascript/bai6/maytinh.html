@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+</head>
+
+<body>
+
+    <table align="center" cellpadding=5 cellspacing=0 width=200>
+        <tr>
+            <td align="right" colspan="4">
+                <label id="loai" for=""></label>
+                <hr>
+                <label id="ketqua" for="">0</label>
+            </td>
+
+        </tr>
+        <tr align="center">
+            <td><button id="CE" onclick="" style="width: 50px;height: 30px;"> CE </button></td>
+            <td><button id="⇽" onclick="" style="width: 50px;height: 30px;"> ⇽ </button></td>
+            <td><button id="%" onclick="" style="width: 50px;height: 30px;"> % </button> </td>
+            <td><button id="+" onclick="cong()" style="width: 50px;height: 30px;"> + </button> </td>
+        </tr>
+        <tr align="center">
+            <td><button id="7" onclick="them7()" style="width: 50px;height: 30px;"> 7 </button></td>
+            <td><button id="8" onclick="them8()" style="width: 50px;height: 30px;"> 8 </button> </td>
+            <td><button id="9" onclick="them9()" style="width: 50px;height: 30px;"> 9 </button> </td>
+            <td><button id="-" onclick="" style="width: 50px;height: 30px;"> - </button> </td>
+        </tr>
+        <tr align="center">
+            <td><button id="4" onclick="them4()" style="width: 50px;height: 30px;"> 4 </button></td>
+            <td><button id="5" onclick="them5()" style="width: 50px;height: 30px;"> 5 </button> </td>
+            <td><button id="6" onclick="them6()" style="width: 50px;height: 30px;"> 6 </button> </td>
+            <td><button id="X" onclick="" style="width: 50px;height: 30px;"> X </button> </td>
+        </tr>
+        <tr align="center">
+            <td><button id="1" onclick="them1()" style="width: 50px;height: 30px;"> 1 </button></td>
+            <td><button id="2" onclick="them2()" style="width: 50px;height: 30px;"> 2 </button></td>
+            <td><button id="3" onclick="them3()" style="width: 50px;height: 30px;"> 3 </button> </td>
+            <td><button id="÷" onclick="" style="width: 50px;height: 30px;"> ÷ </button> </td>
+        </tr>
+        <tr align="center">
+            <td><button id="0" onclick="" style="width: 50px;height: 30px;"> 0 </button></td>
+            <td><button id="±" onclick="" style="width: 50px;height: 30px;"> ± </button> </td>
+            <td><button id="," onclick="" style="width: 50px;height: 30px;"> , </button> </td>
+            <td><button id="=" onclick="" style="width: 50px;height: 30px;"> = </button> </td>
+        </tr>
+
+    </table>
+    <script>
+        giatri = [0, 0]
+        var loai;
+        function laygiatri() {
+            giatri[0] = giatri[1];
+            giatri[1] = (parseFloat(document.getElementById("ketqua").innerText))
+        }
+
+        function cong() {
+            laygiatri();
+            document.getElementById("ketqua").innerText = giatri[0] + giatri[1]
+            document.getElementById("loai").innerText = "+"
+            
+        }
+        function them0() {
+
+            var ketqua = document.getElementById("ketqua").innerText
+            if (ketqua == "0") {
+                document.getElementById("ketqua").innerText = "0"
+            } else {
+                ketqua = ketqua + "0"
+                document.getElementById("ketqua").innerText = ketqua
+            }
+
+        }
+        function them1() {
+
+            var ketqua = document.getElementById("ketqua").innerText
+            if (ketqua == "0") {
+                document.getElementById("ketqua").innerText = "1"
+            } else {
+                ketqua = ketqua + "1"
+                document.getElementById("ketqua").innerText = ketqua
+            }
+
+        }
+        function them2() {
+
+            var ketqua = document.getElementById("ketqua").innerText
+            if (ketqua == "0") {
+                document.getElementById("ketqua").innerText = "3"
+            } else {
+                ketqua = ketqua + "2"
+                document.getElementById("ketqua").innerText = ketqua
+            }
+
+        }
+        function them3() {
+
+            var ketqua = document.getElementById("ketqua").innerText
+            if (ketqua == "0") {
+                document.getElementById("ketqua").innerText = "3"
+            } else {
+                ketqua = ketqua + "3"
+                document.getElementById("ketqua").innerText = ketqua
+            }
+
+        }
+        function them4() {
+
+            var ketqua = document.getElementById("ketqua").innerText
+            if (ketqua == "0") {
+                document.getElementById("ketqua").innerText = "4"
+            } else {
+                ketqua = ketqua + "4"
+                document.getElementById("ketqua").innerText = ketqua
+
+            }
+
+        }
+        function them5() {
+
+            var ketqua = document.getElementById("ketqua").innerText
+            if (ketqua == "0") {
+                document.getElementById("ketqua").innerText = "5"
+            } else {
+                ketqua = ketqua + "5"
+                document.getElementById("ketqua").innerText = ketqua
+            }
+
+        }
+        function them6() {
+
+            var ketqua = document.getElementById("ketqua").innerText
+            if (ketqua == "0") {
+                document.getElementById("ketqua").innerText = "6"
+            } else {
+                ketqua = ketqua + "6"
+                document.getElementById("ketqua").innerText = ketqua
+            }
+
+        }
+        function them7() {
+
+            var ketqua = document.getElementById("ketqua").innerText
+            if (ketqua == "0") {
+                document.getElementById("ketqua").innerText = "7"
+            } else {
+                ketqua = ketqua + "7"
+                document.getElementById("ketqua").innerText = ketqua
+            }
+
+        }
+        function them8() {
+
+            var ketqua = document.getElementById("ketqua").innerText
+            if (ketqua == "0") {
+                document.getElementById("ketqua").innerText = "8"
+            } else {
+                ketqua = ketqua + "8"
+                document.getElementById("ketqua").innerText = ketqua
+            }
+        }
+        function them9() {
+
+            var ketqua = document.getElementById("ketqua").innerText
+            if (ketqua == "0") {
+                document.getElementById("ketqua").innerText = "9"
+            } else {
+                ketqua = ketqua + "9"
+                document.getElementById("ketqua").innerText = ketqua
+            }
+
+        }
+        function themphay() {
+
+            var ketqua = document.getElementById("ketqua").innerText
+            if (ketqua == "0") {
+                document.getElementById("ketqua").innerText = ","
+            } else {
+                ketqua = ketqua + ","
+                document.getElementById("ketqua").innerText = ketqua
+            }
+
+        }
+    </script>
+</body>
+
+</html>
