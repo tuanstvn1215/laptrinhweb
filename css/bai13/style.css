@@ -1,0 +1,128 @@
+body {
+    margin: auto;
+    width : 1000px;
+}
+
+.header {
+    height       : 150px;
+    margin-bottom: 5px;
+    display      : flex;
+
+}
+
+.header .logo {
+    height          : auto;
+    background-color: red;
+    width           : 30%;
+}
+
+.header .banner {
+    margin-left     : 5px;
+    height          : auto;
+    background-color: green;
+    width           : 70%;
+}
+
+.nav-bar {
+    display        : flex;
+    flex-direction : row;
+    justify-content: space-between;
+    align-items    : center;
+    height         : 30px;
+    border         : solid 1px black;
+    margin-top     : 5px;
+    margin-bottom  : 5px;
+}
+
+.nav-left {}
+
+.nav-left :not(:first-child) {
+    border-left: solid 1px black;
+}
+
+.nav-left-item {
+    margin       : auto;
+    text-align   : center;
+    float        : left;
+    padding-left : 20px;
+    padding-right: 20px;
+}
+
+.nav-left-item:hover {
+    cursor: pointer;
+    color : orangered;
+}
+
+.main {
+    justify-content: space-between;
+    display        : flex;
+    margin-top     : 5px;
+    margin-bottom  : 5px;
+}
+
+.main-left {
+
+    height: 500px;
+    width : 150px;
+}
+
+.main-left-item {
+    border: solid 1px black;
+}
+
+.main-left-item:not(:first-child) {
+    margin-top: 10px;
+}
+
+.main-left-item .item {
+    padding: 2px 0px 5px 10px;
+}
+
+.main-center {
+    border: solid 1px black;
+    height: 500px;
+    width : 650px;
+}
+
+.main-right {
+    border: solid 1px black;
+    height: 500px;
+    width : 170px;
+}
+
+
+
+.footer {
+    margin-top   : 5px;
+    margin-bottom: 5px;
+}
+
+.footer {
+    align-items    : center;
+    height         : 30px;
+    border         : solid 1px black;
+    display        : flex;
+    justify-content: space-between;
+}
+
+.footer-left {
+    padding-left: 10px;
+}
+
+.footer-right :not(:first-child) {
+    border-left: solid 1px black;
+}
+
+.footer-right-item {
+    text-decoration: underline;
+    margin         : auto;
+    text-align     : center;
+    float          : left;
+    padding-left   : 20px;
+    padding-right  : 20px;
+}
+
+.footer-right-item:hover {
+    cursor: pointer;
+    color : orangered;
+}

@@ -1,0 +1,75 @@
+body {
+    display        : flex;
+    justify-content: center;
+    padding        : 0px;
+}
+
+#content {
+    margin-top: 0px;
+    border    : solid 1px gray;
+    width     : 800px;
+    padding   : 0px;
+}
+
+.title {
+
+    margin-top      : 0px;
+    padding         : 5px;
+    background-color: rgb(3, 109, 9);
+    color           : white;
+}
+
+.title h1 {}
+
+.main {
+    display        : flex;
+    justify-content: space-between;
+    flex-direction : row;
+}
+
+.menu {
+    width: 550px;
+}
+
+.menu ul {
+    padding        : 0px;
+    list-style-type: none;
+}
+
+.menu ul li {
+    text-align: left;
+    width     : 130px;
+    padding   : 5px;
+
+    text-decoration: none;
+}
+
+.menu ul li:hover {
+    cursor: pointer;
+    color : red;
+}
+
+
+.content-warp {
+    padding: 20px;
+}
+
+.content h1 {}
+
+.content div .link {
+    text-decoration: underline;
+}
+
+.content div .link:hover {
+    cursor: pointer;
+    color : red;
+}
+
+.Side-Bar {
+    width           : 550px;
+    margin-top      : 10px;
+    padding         : 10px;
+    display         : block;
+    background-color: rgb(2, 80, 6);
+    color           : white;
+}

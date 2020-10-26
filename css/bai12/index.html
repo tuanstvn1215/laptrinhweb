@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>CSS</title>
+</head>
+
+<body>
+    <style>
+        .Side-Bar {
+            display: none;
+        }
+
+        .content div .link {
+            text-decoration: underline;
+        }
+    </style>
+    <link id="style" rel="stylesheet" href="">
+    <div id='content'>
+        <div class="title">
+            <h1>Welcome to My Homepage</h1>
+            <div>Use the menu to select different Stylesheets</div>
+        </div>
+        <div class="main">
+            <div class="menu">
+                <ul>
+                    <li onclick="stylesheet1()">Stylesheet 1</li>
+                    <li onclick="stylesheet2()">Stylesheet 2</li>
+                    <li onclick="stylesheet3()">Stylesheet 3</li>
+                    <li onclick="stylesheet4()">Stylesheet 4</li>
+                    <li onclick="stylesheet0()" i>No Stylesheet</li>
+                </ul>
+            </div>
+            <div class="content-warp">
+                <div class="content">
+                    <h1>Same Page Different Stylesheets</h1>
+                    <div>This is demonstration of how different stylesheet can change the layout of your HTML page. You
+                        can
+                        change the layout of this page by selecting different stylesheets in the menu, or by one of the
+                        following links
+                        <span class="link">Stylesheet1</span>, <span class="link">Stylesheet2</span>,
+                        <span class="link">Stylesheet3</span>,
+                        <span class="link">Stylesheet4.</span>
+                    </div>
+                </div>
+                <div class="content">
+                    <h1>No Styles</h1>
+                    <div>This page uses DIV element to group different sections of the HTML page. Click here to see how
+                        the
+                        page looks like with no stylesheet: <br> <span class="link">No Stylesheet.</span></div>
+                </div>
+
+            </div>
+            <div class="content Side-Bar">
+                <h2>Side-Bar</h2>
+                <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et
+                    dolore magna aliqua. Erat velit scelerisque in dictum non consectetur.</div>
+            </div>
+        </div>
+
+
+    </div>
+
+
+    <script>
+
+        function stylesheet1() {
+            document.getElementById("style").setAttribute("href", "./stylesheet1.css")
+        }
+        function stylesheet2() {
+            document.getElementById("style").setAttribute("href", "./stylesheet2.css")
+        }
+        function stylesheet3() {
+            document.getElementById("style").setAttribute("href", "./stylesheet0.css")
+        }
+        function stylesheet4() {
+            document.getElementById("style").setAttribute("href", "./stylesheet0.css")
+        }
+        function stylesheet0() {
+            document.getElementById("style").setAttribute("href", "./stylesheet0.css")
+        }
+    </script>
+</body>
+
+</html>
