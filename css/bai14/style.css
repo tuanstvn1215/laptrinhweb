@@ -1,0 +1,104 @@
+body {
+    font-family: sans-serif;
+}
+
+.header {
+
+    padding         : 10px 10px 0px 10px;
+    background-color: rgb(224, 140, 79);
+}
+
+.header-top .banner {
+    font-size : x-large;
+    text-align: center;
+    height    : 50px;
+}
+
+.nav-bar {
+    height: 20px;
+}
+
+.nav-bar .nav-item {
+    display        : flex;
+    flex-direction : column;
+    justify-content: center;
+    text-align     : center;
+    border-right   : 1px solid grey;
+    vertical-align : middle;
+    height         : 20px;
+    float          : left;
+    width          : 100px;
+}
+
+.nav-bar .nav-item:hover {
+    cursor          : pointer;
+    background-color: rgb(228, 119, 42);
+    ;
+}
+
+.main {
+    min-height     : 700px;
+    display        : flex;
+    flex-direction : row;
+    justify-content: space-between;
+}
+
+.main-left-item {
+    padding-left: 10px;
+    display     : flex;
+    align-items : center;
+    height      : 30px;
+
+}
+
+.main-left-item:not(:first-child) {
+    border-top: 1px solid black;
+}
+
+.main-left {
+    width           : 250px;
+    background-color: wheat;
+}
+
+.main-left-title {
+
+    padding-left    : 10px;
+    background-color: rgb(241, 209, 148);
+    font-size       : large;
+    display         : flex;
+    align-items     : center;
+    height          : 40px;
+    font-weight     : bold;
+}
+
+.main-left-title:hover {
+    background-color: rgb(245, 192, 93);
+    cursor          : pointer;
+}
+
+.main-left-title .icon {
+    font-size  : inherit;
+    font-weight: inherit;
+    width      : 20px;
+}
+
+.main-left-list-item {
+    display: none;
+}
+
+.main-center {}
+
+.main-right {
+    padding         : 10px 0px 0px 10px;
+    width           : 250px;
+    background-color: aqua;
+}
+
+.footer-title {
+    padding         : 10px;
+    background-color: rgb(224, 140, 79);
+    ;
+    flex-direction : row;
+    display        : flex;
+    justify-content: center;
+}

@@ -1,51 +1,74 @@
 body {
-    margin: auto;
-    width : 1000px;
+    font-family     : sans-serif;
+    background-color: rgb(216, 216, 216);
+    margin          : auto;
+    width           : 1000px;
 }
 
 .header {
-    height       : 150px;
-    margin-bottom: 5px;
-    display      : flex;
+    box-shadow      : 0px 1px 0px 0px grey;
+    border          : solid 1px gray;
+    border-radius   : 3px;
+    background-color: aqua;
+    height          : 150px;
+    margin-bottom   : 5px;
+    display         : flex;
 
 }
 
 .header .logo {
-    height          : auto;
-    background-color: red;
-    width           : 30%;
+
+    background-image   : url("logo.png");
+    background-size    : contain;
+    background-color   : rgb(1, 181, 194);
+    background-repeat  : no-repeat;
+    background-position: center;
+    width              : 30%;
 }
 
 .header .banner {
-    margin-left     : 5px;
-    height          : auto;
-    background-color: green;
-    width           : 70%;
+    border-top-right-radius   : inherit;
+    border-bottom-right-radius: inherit;
+    background-color          : rgb(1, 181, 194);
+    width                     : 100%;
 }
 
 .nav-bar {
-    display        : flex;
-    flex-direction : row;
-    justify-content: space-between;
-    align-items    : center;
-    height         : 30px;
-    border         : solid 1px black;
-    margin-top     : 5px;
-    margin-bottom  : 5px;
+    box-shadow      : 0px 1px 0px 0px grey;
+    border          : solid 1px gray;
+    border-radius   : 3px;
+    background-color: rgb(122, 195, 255);
+    display         : flex;
+    flex-direction  : row;
+    justify-content : space-between;
+    align-items     : center;
+    height          : 50px;
+
+    margin-top   : 5px;
+    margin-bottom: 5px;
 }
 
-.nav-left {}
+.nav-left {
+
+    height: inherit;
+}
 
 .nav-left :not(:first-child) {
-    border-left: solid 1px black;
+    border-left: solid 1px grey;
 }
 
 .nav-left-item {
-    margin       : auto;
-    text-align   : center;
-    float        : left;
-    padding-left : 20px;
-    padding-right: 20px;
+    font-style     : bold;
+    display        : flex;
+    flex-direction : column;
+    justify-content: center;
+    height         : inherit;
+    margin         : auto;
+    text-align     : center;
+    float          : left;
+    padding-left   : 20px;
+    padding-right  : 20px;
+
 }
 
 .nav-left-item:hover {
@@ -54,21 +77,23 @@ body {
 }
 
 .main {
-    justify-content: space-between;
-    display        : flex;
-    margin-top     : 5px;
-    margin-bottom  : 5px;
+    box-shadow      : 0px 1px 0px 0px grey;
+    border          : solid 1px gray;
+    border-radius   : 3px;
+    background-color: white;
+    justify-content : space-between;
+    display         : flex;
+    margin-top      : 5px;
+    margin-bottom   : 5px;
 }
 
 .main-left {
-
-    height: 500px;
-    width : 150px;
+    padding: 10px;
+    height : 500px;
+    width  : 150px;
 }
 
-.main-left-item {
-    border: solid 1px black;
-}
+.main-left-item {}
 
 .main-left-item:not(:first-child) {
     margin-top: 10px;
@@ -79,30 +104,33 @@ body {
 }
 
 .main-center {
-    border: solid 1px black;
-    height: 500px;
-    width : 650px;
+    padding: 10px;
+    border : solid 1px black;
+    height : 500px;
+    width  : 650px;
 }
 
 .main-right {
-    border: solid 1px black;
-    height: 500px;
-    width : 170px;
+    padding: 10px;
+    height : 500px;
+    width  : 170px;
 }
 
 
 
-.footer {
-    margin-top   : 5px;
-    margin-bottom: 5px;
-}
 
 .footer {
-    align-items    : center;
-    height         : 30px;
-    border         : solid 1px black;
-    display        : flex;
-    justify-content: space-between;
+    margin-top      : 5px;
+    margin-bottom   : 5px;
+    box-shadow      : 1px 1px 1px grey;
+    border          : solid 1px gray;
+    border-radius   : 3px;
+    background-color: rgb(122, 195, 255);
+    align-items     : center;
+    height          : 30px;
+    border          : solid 1px black;
+    display         : flex;
+    justify-content : space-between;
 }
 
 .footer-left {
