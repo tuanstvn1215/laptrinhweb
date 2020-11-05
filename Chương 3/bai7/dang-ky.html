@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <title>Đăng kí</title>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <form id="register-form" action="" method="post">
+            <div class="register-title">Đăng Kí</div>
+            <div class="register-form-item">
+                <label for="">Tên đăng nhập:<span>(*)</span></label>
+                <input onkeydown='checkBlank()' id="username" name="username" type="text">
+            </div>
+            <div class="register-form-item">
+                <label for="">Password:<span>(*)</span></label>
+                <input onkeydown='checkBlank()' id='password' name='password' type="password">
+            </div>
+            <div class="register-form-item">
+                <label for="">Nhập lại mật khẩu:<span>(*)</span></label>
+                <input onkeydown='checkBlank()' id='rppassword' name='rppassword' type="password">
+            </div>
+            <div class="register-form-item">
+                <label for="">Họ của bạn:<span>(*)</span></label>
+                <input onkeydown='checkBlank()' id="lastname" name='lastname' type="text">
+            </div>
+            <div class="register-form-item">
+                <label for="">Tên của bạn:<span>(*)</span></label>
+                <input onkeydown='checkBlank()' id='firstname' name='firstname' type="text">
+            </div>
+            <div class="register-form-item">
+                <label for="">Email:<span>(*)</span></label>
+                <input onkeydown='checkBlank()' id='email' name='email' type="text">
+            </div>
+            <div class="register-form-item">
+                <label for="">Số điện thoại:<span>(*)</span></label>
+                <input onkeypress='checkBlank()' id='number' name='number' type="text">
+            </div>
+            <button type="submit" class="register-form-submit ">Đăng kí</button>
+        </form>
+    </div>
+    <style>
+        .container {
+            align-content: center;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+
+        .register-title {
+            font-weight: bold;
+            font-size: xx-large;
+            text-align: center;
+            padding-bottom: 10px;
+        }
+
+        #register-form {
+            padding: 40px;
+            width: 400px;
+            border: solid 1px gainsboro;
+            height: 450px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .register-form-item {
+            display: flex;
+            width: 330px;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        .register-form-item input {
+            border: 1px solid black;
+        }
+
+
+
+        .register-form-submit {
+            width: 330px;
+            height: 50px;
+            border: none;
+            color: white;
+            font-size: large;
+            background-color: green;
+        }
+
+        .register-form-submit:hover {
+            background-color: rgb(7, 182, 7);
+        }
+    </style>
+    <script>
+        var registerForm = document.getElementById('register-form')
+        var username = document.getElementById('username')
+        var password = document.getElementById('password')
+        var rppassword = document.getElementById('rppassword')
+        var lastname = document.getElementById('lastname')
+        var firstname = document.getElementById('firstname')
+        var email = document.getElementById('email')
+        var number = document.getElementById('number')
+
+        function checkBlank() {
+            checkBlankUsername()
+            checkBlankPassword()
+            checkBlankRppassword()
+            checkBlankFirstname()
+            checkBlankLastname()
+            checkBlankEmail()
+            checkBlankNumber()
+            checkpassword()
+        }
+        function checkpassword() {
+            if (password.value.c == rppassword.value) {
+                rppassword.style.borderColor = 'red'
+            } else
+                rppassword.style.borderColor = 'black'
+
+        }
+        function checkBlankUsername() {
+            if (username.value.length == 0) {
+                username.style.borderColor = 'red'
+            } else
+                username.style.borderColor = 'black'
+        }
+        function checkBlankPassword() {
+            if (password.value.length == 0) {
+                password.style.borderColor = 'red'
+            } else
+                password.style.borderColor = 'black'
+        }
+        function checkBlankRppassword() {
+            if (rppassword.value.length == 0) {
+                rppassword.style.borderColor = 'red'
+            } else
+                rppassword.style.borderColor = 'black'
+        }
+        function checkBlankLastname() {
+            if (lastname.value.length == 0) {
+                lastname.style.borderColor = 'red'
+            } else
+                lastname.style.borderColor = 'black'
+        }
+        function checkBlankFirstname() {
+            if (firstname.value.length == 0) {
+                firstname.style.borderColor = 'red'
+            } else
+                firstname.style.borderColor = 'black'
+        }
+        function checkBlankEmail() {
+            if (email.value.length == 0) {
+                email.style.borderColor = 'red'
+            } else
+                email.style.borderColor = 'black'
+        }
+        function checkBlankNumber() {
+            if (number.value.length == 0) {
+                number.style.borderColor = 'red'
+            } else
+                number.style.borderColor = 'black'
+        }
+
+
+    </script>
+</body>
+
+</html>
